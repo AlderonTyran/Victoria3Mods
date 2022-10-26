@@ -1,0 +1,9 @@
+First Economic mod for Vicky 3, this mod aims to fix some economic issues and realism issues that Vicky 3 suffers from. The primary changes of this mod include:
+Prices range from 1%-199% of base price (most variation we can have thanks to the defines)
+Min price is $0 (although it will not actually ever reach this technically)
+Economy of scale realistically never caps
+Total Good shortages will prevent production
+Min wage can now be as low as £0.01
+Max wage increase can now be 100% of current wage
+Buildings can increase wages after the first week, instead of first two weeks
+Enjoy!

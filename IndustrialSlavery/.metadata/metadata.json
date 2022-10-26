@@ -1,0 +1,12 @@
+{
+  "name" : "Industrial Slavery",
+  "id" : "",
+  "version" : "1.0.1",
+  "supported_game_version" : "1.0.3",
+  "short_description" : "Allows slaves to work in manufacturing",
+  "tags" : [],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

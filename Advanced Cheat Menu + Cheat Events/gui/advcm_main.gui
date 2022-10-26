@@ -1,0 +1,373 @@
+﻿
+
+# This window is just for testing. You can spawn it from the console menu.
+
+window = {
+	name = "advcm_main_window"
+	parentanchor = top|right
+	position = { -50 100 }
+	size = { 640 %100 }
+	layer = windows_layer
+	filter_mouse = all
+	allow_outside = yes
+	alwaystransparent = no
+	
+	using = Window_Background
+	using = Window_Decoration
+	movable = yes
+    
+    datacontext = "[GetVariableSystem]"
+	datacontext = "[GetPlayer]"
+	
+	
+	state = {
+		name = _show
+		using = Animation_FadeIn_Quick
+	}
+	
+	state = {
+		name = _hide
+		using = Animation_FadeOut_Quick
+	}
+	
+	vbox = {
+		restrictparent_min = yes
+		using = Window_Margins
+		
+		header_pattern = {
+			layoutpolicy_horizontal = expanding
+
+
+			blockoverride "header_text"
+			{
+				text = "Advanced Cheat Menu +"
+			}
+
+			blockoverride "button_close"
+			{
+				onclick = "[ExecuteConsoleCommand('gui.clearwidgets')]"
+			}
+		}
+		
+		
+		widget = {
+			size = { 640 400 }
+			
+			widget = {
+                position = { 0 30 }
+                size = { 640 280 }
+				vbox = {
+					hbox = {
+						button_standard = {
+							name = "advcm_treasury"
+							onclick = "[ExecuteConsoleCommand('event advcm.2')]"
+							onrightclick = "[ExecuteConsoleCommand('event advcm.3')]"
+							button_ignore = none
+							tooltip = "Left-Click to increase Treasury by £1M. Right-Click to decrease Treasury by £1M."
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Treasury"
+						}
+						
+						button_standard = {
+							name = "advcm_bureaucracy"
+							onclick = "[ExecuteConsoleCommand('event advcm.8')]"
+							tooltip = "Left-Click to increase Bureaucracy by 5k, Right click to remove it."
+							onrightclick = "[ExecuteConsoleCommand('event advcm.23')]"
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Bureaucracy"
+						}
+						
+						button_standard = {
+							name = "advcm_authority"
+							onclick = "[ExecuteConsoleCommand('event advcm.9')]"
+							tooltip = "Left-Click to increase Authority by 5k, Right click to remove it."
+							onrightclick = "[ExecuteConsoleCommand('event advcm.24')]"
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Authority"
+						}
+						
+						button_standard = {
+							name = "advcm_influence"
+							onclick = "[ExecuteConsoleCommand('event advcm.10')]"
+							tooltip = "Left-Click to increase Influence by 5k, Right click to remove it."
+							onrightclick = "[ExecuteConsoleCommand('event advcm.25')]"
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Influence"
+						}
+					
+					}
+					
+					hbox = {
+						button_standard = {
+							name = "advcm_loyalists"
+							onclick = "[ExecuteConsoleCommand('event advcm.1')]"
+							tooltip = "Left-Click to increase Loyalists by 100k. Right-Click to decrease Loyalists by 100k."
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Loyalists"
+						}
+						
+						button_standard = {
+							name = "advcm_radicals"
+							onclick = "[ExecuteConsoleCommand('event advcm.1')]"
+							tooltip = "Left-Click to increase Radicals by 100k. Right-Click to decrease Radicals by 100k."
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Radicals"
+						}
+						
+						button_standard = {
+							name = "advcm_tech_spread"
+							onclick = "[ExecuteConsoleCommand('event advcm.11')]"
+							tooltip = "Left-Click to increase Tech Spread by 5k, Right click to remove it."
+							onrightclick = "[ExecuteConsoleCommand('event advcm.26')]"
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Tech Spread"
+						}
+
+						button_standard = {
+							name = "advcm_infamy"
+							onclick = "[ExecuteConsoleCommand('event advcm.21')]"
+							onrightclick = "[ExecuteConsoleCommand('event advcm.20')]"
+							button_ignore = none
+							tooltip = "Left-Click to increase Infamy by 100. Right-Click to decrease Infamy by 100."
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Infamy"
+						}
+					
+					}
+
+					hbox = {
+						button_standard = {
+							name = "advcm_isolationist"
+							onclick = "[ExecuteConsoleCommand('event advcm.13')]"
+							button_ignore = none
+							tooltip = "Click to become a Isolationist, Xenophobic, Closed Economy."
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Hardcore Introvert"
+						}
+						
+						button_standard = {
+							name = "advcm_isolationist_lite"
+							onclick = "[ExecuteConsoleCommand('event advcm.12')]"
+							tooltip = "Click to become a Isolationist, Not-As-Xenophobic, Closed Economy"
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Introvert-Lite"
+						}
+						
+						button_standard = {
+							name = "advcm_empire_protec"
+							onclick = "[ExecuteConsoleCommand('event advcm.15')]"
+							tooltip = "Click to become a protectionist imperial government."
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Empire-Protec"
+						}
+						
+						button_standard = {
+							name = "advcm_empire_attac"
+							onclick = "[ExecuteConsoleCommand('event advcm.16')]"
+							tooltip = "Click to become a merchantile imperial government."
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Empire-Attac"
+						}
+					
+					}
+					
+					hbox = {
+						button_standard = {
+							name = "advcm_ancap"
+							onclick = "[ExecuteConsoleCommand('event advcm.14')]"
+							tooltip = "Click to become the internet's favorite meme."
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "An-Capistan"
+						}
+						
+						button_standard = {
+							name = "advcm_rob_bar_par"
+							onclick = "[ExecuteConsoleCommand('event advcm.19')]"
+							tooltip = "Click to become what communists fear."
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Robber Barron's"
+						}
+						
+						button_standard = {
+							name = "advcm_syndi"
+							onclick = "[ExecuteConsoleCommand('event advcm.17')]"
+							tooltip = "Click to aquire the means of production."
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Marx's Dream"
+						}
+
+						button_standard = {
+							name = "advcm_commi"
+							onclick = "[ExecuteConsoleCommand('event advcm.18')]"
+							button_ignore = none
+							tooltip = "Click to become what capitalists fear"
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Lenin's Legacy"
+						}
+					
+					}
+
+					hbox = {
+						button_standard = {
+							name = "advcm_pop"
+							onclick = "[ExecuteConsoleCommand('event advcm.22')]"
+							tooltip = "Click to gain a +50% pop growth modifier, Right click to remove it."
+							onrightclick = "[ExecuteConsoleCommand('event advcm.27')]"
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Growth Serum"
+						}
+						
+						button_standard = {
+							name = "advcm_build"
+							onclick = "[ExecuteConsoleCommand('fastbuild')]"
+							tooltip = "Click to build instantly, click again to disable. APPLIES TO ALL COUNTRIES"
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Construction Drive"
+						}
+						
+						button_standard = {
+							name = "advcm_enact"
+							onclick = "[ExecuteConsoleCommand('fastenact')]"
+							tooltip = "Click to enact instantly, click again to disable. APPLIES TO ALL COUNTRIES"
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Political Will"
+						}
+
+						button_standard = {
+							name = "advcm_research"
+							onclick = "[ExecuteConsoleCommand('fastresearch')]"
+							button_ignore = none
+							tooltip = "Click to research instantly, click again to disable. APPLIES TO ALL COUNTRIES"
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Brainiac"
+						}
+					
+					}
+
+					hbox = {
+						button_standard = {
+							name = "advcm_yesmen"
+							onclick = "[ExecuteConsoleCommand('yesmen')]"
+							tooltip = "Click to have everyone agree with you, click again to disable."
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Bardic Charisma"
+						}
+						
+						button_standard = {
+							name = "advcm_taxation"
+							onclick = "[ExecuteConsoleCommand('event advcm.28')]"
+							onrightclick = "[ExecuteConsoleCommand('event advcm.29')]"
+							tooltip = "Click to increase taxrate by 50%, click again to disable."
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Let Them Eat Cake!"
+						}
+						
+						button_standard = {
+							name = "advcm_prod"
+							onclick = "[ExecuteConsoleCommand('event advcm.38')]"
+							onrightclick = "[ExecuteConsoleCommand('event advcm.39')]"
+							tooltip = "Click to increase production by 500%, click again to disable."
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Magical Factories!"
+						}
+
+						button_standard = {
+							name = "advcm_throughput"
+							onclick = "[ExecuteConsoleCommand('event advcm.38')]"
+							onrightclick = "[ExecuteConsoleCommand('event advcm.39')]"
+							button_ignore = none
+							tooltip = "Click to increase Throughput by 500%, click again to disable."
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "Robot Factories!"
+						}
+					
+					}
+
+					hbox = {
+						button_standard = {
+							name = "advcm_kill"
+							onclick = "[ExecuteConsoleCommand('event advcm.30')]"
+							onrightclick = "[ExecuteConsoleCommand('event advcm.31')]"
+							tooltip = "Click to gain a +200% killrate modifier, Right click to remove it."
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "The Killing Fields"
+						}
+						
+						button_standard = {
+							name = "advcm_recovery"
+							onclick = "[ExecuteConsoleCommand('event advcm.36')]"
+							onrightclick = "[ExecuteConsoleCommand('event advcm.37')]"
+							tooltip = "Click to gain a +200% recoveryrate modifier, click again to disable."
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "The Immortals"
+						}
+						
+						button_standard = {
+							name = "advcm_attac"
+							onclick = "[ExecuteConsoleCommand('event advcm.32')]"
+							onrightclick = "[ExecuteConsoleCommand('event advcm.33')]"
+							tooltip = "Click to gain x2 to attack on land and sea, click again to disable."
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "The Great Attac"
+						}
+
+						button_standard = {
+							name = "advcm_protec"
+							onclick = "[ExecuteConsoleCommand('event advcm.34')]"
+							onrightclick = "[ExecuteConsoleCommand('event advcm.35')]"
+							tooltip = "Click to gain x2 to defence on land and sea, click again to disable."
+							using = tooltip_ne
+							size = { 130 35 }
+							text = "The Great Protec"
+						}
+					
+					}
+				}
+            }			
+			
+            widget = {
+                position = { 265 350 }
+                size = { 110 40 }
+                hbox = {
+                    button_standard = {
+						layoutpolicy_horizontal = expanding
+						size = { 100 30 }
+						text = "Debug Mode"
+						onclick = "[ExecuteConsoleCommand('debug_mode')]"
+						tooltip = "Click to toggle Debug Mode"
+                    }
+                }
+			}
+			
+		}            
+	
+	}
+	
+}

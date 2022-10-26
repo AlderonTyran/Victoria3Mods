@@ -1,0 +1,12 @@
+{
+  "name" : "Improved Automation",
+  "id" : "",
+  "version" : "1.0.1",
+  "supported_game_version" : "1.0.3",
+  "short_description" : "Improved Automation",
+  "tags" : [],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

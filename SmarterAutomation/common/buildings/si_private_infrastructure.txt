@@ -1,0 +1,40 @@
+﻿############ PRIVATE INFRASTRUCTURE
+
+building_railway = {
+	building_group = bg_private_infrastructure	
+	texture = "gfx/interface/icons/building_icons/building_railway.dds"
+	
+	unlocking_technologies = {
+		railways
+	}
+
+	production_method_groups = {
+		pmg_base_building_railway
+		pmg_passenger_trains
+		pmg_armored_trains
+	}
+
+	required_construction = construction_cost_high
+	
+	should_auto_expand = { 
+		OR = {
+			cash_reserves_ratio > 0.75
+			is_subsidized = yes
+		}
+		state = {
+			cb_state_has_free_workforce = yes
+		}
+		OR = {
+			AND ={ 
+				NOT = {has_law = law_type:law_command_economy}
+				weekly_profit > 1
+				state.market_access < 0.999
+			}
+			AND = { 
+				state.market_access < 0.999
+				owner = { has_law = law_type:law_command_economy}
+			}
+		}
+		owner.construction_queue_duration < max_autoexpand_queue_weeks
+	}
+}

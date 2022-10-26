@@ -1,0 +1,32 @@
+﻿default_auto_expand_rule = { 
+	cash_reserves_ratio > 0.75
+	state = {
+		cb_state_has_free_workforce = yes
+	}
+	building_has_goods_shortage = false
+	state.market_access > 0.9
+	OR = {
+		weekly_profit > 1
+		OR = {
+			has_active_production_method = pm_worker_cooperative_building_food_industry
+			has_active_production_method = pm_worker_cooperative_building_textile_mills
+			has_active_production_method = pm_worker_cooperative_building_furniture_manufacturies
+			has_active_production_method = pm_worker_cooperative_building_glassworks
+			has_active_production_method = pm_worker_cooperative_building_tooling_workshops
+			has_active_production_method = pm_worker_cooperative_building_paper_mills
+			has_active_production_method = pm_worker_cooperative_building_shipyards 
+			has_active_production_method = pm_worker_cooperative_building_arms_industry 
+			has_active_production_method = pm_worker_cooperative_building_rice_farm 
+			has_active_production_method = pm_worker_cooperative_building_coal_mine 
+			has_active_production_method = pm_worker_cooperative_building_iron_mine 
+			has_active_production_method = pm_worker_cooperative_building_lead_mine 
+			has_active_production_method = pm_worker_cooperative_building_sulfur_mine
+			has_active_production_method = pm_worker_cooperative_building_gold_mine 
+			has_active_production_method = pm_worker_cooperative_building_logging_camp
+			has_active_production_method = pm_worker_cooperative_building_fishing_wharf
+			has_active_production_method = pm_worker_cooperative_building_whaling_station
+		}
+		owner = { has_law = law_type:law_command_economy}
+	}
+	owner.construction_queue_duration < max_autoexpand_queue_weeks
+}

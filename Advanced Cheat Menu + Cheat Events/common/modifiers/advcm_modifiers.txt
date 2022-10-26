@@ -1,0 +1,61 @@
+﻿advcm_add_bureaucracy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_bureaucracy_add = 5000
+}
+
+advcm_add_authority = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_authority_add = 5000
+}
+
+advcm_add_influence = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_influence_add = 5000
+}
+
+advcm_add_tech_spread = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_tech_spread_add = 5000
+}
+
+advcm_add_birth_rate = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_birth_rate_mult = 0.5
+}
+
+advcm_add_production = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	building_production_mult = 5.0
+}
+
+advcm_add_throughput = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	building_throughput_mult = 5.0
+}
+
+advcm_add_income = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	tax_income_add = 0.5
+}
+
+advcm_add_killrate = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	unit_kill_rate_add = 2.0
+}
+
+advcm_add_attack = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	unit_navy_offense_mult = 2.0
+	unit_offense_mult = 2.0
+}
+
+advcm_add_defense = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	unit_navy_defense_mult = 2.0
+	unit_defense_mult = 2.0
+}
+
+advcm_add_recovery = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	unit_recovery_rate_add = 2.0
+}

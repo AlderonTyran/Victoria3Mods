@@ -1,0 +1,12 @@
+{
+  "name" : "Advanced Cheat Menu +",
+  "id" : "",
+  "version" : "1.1.1",
+  "supported_game_version" : "1.0.3",
+  "short_description" : "",
+  "tags" : [],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

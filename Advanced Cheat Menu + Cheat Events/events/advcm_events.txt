@@ -1,0 +1,517 @@
+﻿namespace = advcm
+
+advcm.1 = {								# set variable
+	type = country_event
+	hidden = yes
+	immediate = {
+		set_global_variable = {
+			name = advcm_player_country
+			value = this
+		}
+	}
+}
+
+advcm.2 = {								# add money
+	type = country_event
+	hidden = yes
+	immediate = {
+		add_treasury = 1000000
+	}
+}
+
+advcm.3 = {								# rem money
+	type = country_event
+	hidden = yes
+	immediate = {
+		add_treasury = -1000000
+	}
+}
+
+advcm.4 = {								# add loyalists
+	type = country_event
+	hidden = yes
+	immediate = {
+		add_loyalists = { value = 100000 }
+	}
+}
+
+advcm.5 = {								# rem loyalists
+	type = country_event
+	hidden = yes
+	immediate = {
+		add_loyalists = { value = -100000 }
+	}
+}
+
+advcm.6 = {								# add radicals
+	type = country_event
+	hidden = yes
+	immediate = {
+		add_radicals = { value = 100000 }
+	}
+}
+
+advcm.7 = {								# rem radicals
+	type = country_event
+	hidden = yes
+	immediate = {
+		add_radicals = { value = -100000 }
+	}
+}
+
+advcm.8 = {								# add bureaucracy						
+	type = country_event
+	hidden = yes
+	immediate = {
+		add_modifier = advcm_add_bureaucracy
+	}
+}
+
+advcm.9 = {								# add authority
+	type = country_event
+	hidden = yes
+	immediate = {
+		add_modifier = advcm_add_authority
+	}
+}
+
+advcm.10 = {								# add influence
+	type = country_event
+	hidden = yes
+	immediate = {
+		add_modifier = advcm_add_influence
+	}
+}
+
+advcm.11 = {								# add tech spread
+	type = country_event
+	hidden = yes
+	immediate = {
+		add_modifier = advcm_add_tech_spread
+	}
+}
+
+
+advcm.12 = { # Isolationist Lite
+	type = country_event
+	hidden = yes
+	immediate = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_ethnostate
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_migration_controls
+		activate_law = law_type:law_secret_police
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_public_health_insurance
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_militarized_police
+		activate_law = law_type:law_poor_laws
+		activate_law = law_type:law_serfdom_banned
+		activate_law = law_type:law_outlawed_dissent
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_isolationism
+	}
+}
+
+advcm.13 = { # Isolationist 
+	type = country_event
+	hidden = yes
+	immediate = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_ethnostate
+		activate_law = law_type:law_command_economy
+		activate_law = law_type:law_closed_borders
+		activate_law = law_type:law_secret_police
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_public_health_insurance
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_militarized_police
+		activate_law = law_type:law_poor_laws
+		activate_law = law_type:law_serfdom_banned
+		activate_law = law_type:law_outlawed_dissent
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_isolationism
+	}
+}
+
+advcm.14 = { # Ancap 
+	type = country_event
+	hidden = yes
+	immediate = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_anarchy
+		activate_law = law_type:law_multicultural
+		activate_law = law_type:law_laissez_faire
+		activate_law = law_type:law_no_migration_controls
+		activate_law = law_type:law_guaranteed_liberties
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_total_separation
+		activate_law = law_type:law_private_health_insurance
+		activate_law = law_type:law_private_schools
+		activate_law = law_type:law_local_police
+		activate_law = law_type:law_poor_laws
+		activate_law = law_type:law_serfdom_banned
+		activate_law = law_type:law_protected_speech
+		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_free_trade
+		activate_law = law_type:law_women_own_property
+		scope:ig_petty_bourgeoisie = {
+			add_ruling_interest_group = yes
+		}
+	}
+}
+
+advcm.15 = { # Empire Protec
+	type = country_event
+	hidden = yes
+	immediate = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_migration_controls
+		activate_law = law_type:law_secret_police
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_public_health_insurance
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_militarized_police
+		activate_law = law_type:law_poor_laws
+		activate_law = law_type:law_serfdom_banned
+		activate_law = law_type:law_outlawed_dissent
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_protectionism
+	}
+}
+
+advcm.16 = { # Empire Attac
+	type = country_event
+	hidden = yes
+	immediate = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_migration_controls
+		activate_law = law_type:law_secret_police
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_public_health_insurance
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_militarized_police
+		activate_law = law_type:law_poor_laws
+		activate_law = law_type:law_serfdom_banned
+		activate_law = law_type:law_outlawed_dissent
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_mercantilism
+	}
+}
+
+advcm.17 = { # Syndicalists! 
+	type = country_event
+	hidden = yes
+	immediate = {
+		activate_law = law_type:law_council_republic
+		activate_law = law_type:law_anarchy
+		activate_law = law_type:law_cultural_exclusion
+		activate_law = law_type:law_command_economy
+		activate_law = law_type:law_no_migration_controls
+		activate_law = law_type:law_national_guard
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_public_health_insurance
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_dedicated_police
+		activate_law = law_type:law_wage_controls
+		activate_law = law_type:law_serfdom_banned
+		activate_law = law_type:law_right_of_assembly
+		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_protectionism
+		activate_law = law_type:law_graduated_taxation
+		scope:ig_trade_unions = {
+			add_ruling_interest_group = yes
+		}
+	}
+}
+
+advcm.18 = { # Communists! 
+	type = country_event
+	hidden = yes
+	immediate = {
+		activate_law = law_type:law_council_republic
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_command_economy
+		activate_law = law_type:law_closed_borders
+		activate_law = law_type:law_secret_police
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_public_health_insurance
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_militarized_police
+		activate_law = law_type:law_old_age_pension
+		activate_law = law_type:law_serfdom_banned
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_mass_conscription
+		activate_law = law_type:law_isolationism
+		activate_law = law_type:law_proportional_taxation
+		ruler = {
+			kill_character = yes
+		}
+		scope:ig_trade_unions = {
+			add_ruling_interest_group = yes
+		}
+		
+		# set_state_religion = rel:marxist
+		# every_scope_state = {
+		# 	convert_population = {
+		# 		value = 0.1 # 10% of population in the state
+		# 		target = rel:marxist
+		# 	}
+		# }
+		# every_scope_pop = {
+		# 	limit = {
+		# 		is_pop_type = clergymen
+		# 		not = { has_pop_religion = rel:marxist }
+		# 	}
+		# 	change_poptype = pop_type:peasants
+		# }
+		# every_scope_pop = {
+		# 	limit = {
+		# 		is_pop_type = academics
+		# 		not = { has_pop_religion = rel:marxist }
+		# 	}
+		# 	convert = rel:marxist
+		# }
+	}
+}
+
+advcm.19 = { # Robber Barons' paradise 
+	type = country_event
+	hidden = yes
+	immediate = {
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_multicultural
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_no_migration_controls
+		activate_law = law_type:law_secret_police
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_total_separation
+		activate_law = law_type:law_private_health_insurance
+		activate_law = law_type:law_private_schools
+		activate_law = law_type:law_local_police
+		activate_law = law_type:law_poor_laws
+		activate_law = law_type:law_serfdom_banned
+		activate_law = law_type:law_protected_speech
+		activate_law = law_type:law_national_militia
+		activate_law = law_type:`law_type:law_free_trade
+		activate_law = law_type:law_women_own_property
+		scope:ig_industrialists = {
+			add_ruling_interest_group = yes
+		}
+	}
+}
+
+advcm.20 = { # goodboy 
+	type = country_event
+	hidden = yes
+	immediate = {
+		change_infamy = -100
+	}
+}
+
+advcm.21 = { # badboy 
+	type = country_event
+	hidden = yes
+	immediate = {
+		change_infamy = 100
+	}
+}
+
+advcm.22 = { # pop growth
+	type = country_event
+	hidden = yes
+	immediate = {
+		every_scope_state = {
+		
+			add_modifier = advcm_add_birth_rate
+			
+		}
+	}
+}
+
+advcm.23 = { # rm bureaucracy
+	type = country_event
+	hidden = yes
+	immediate = {
+		remove_modifier = advcm_add_bureaucracy
+	}
+}
+
+advcm.24 = { # rm authority
+	type = country_event
+	hidden = yes
+	immediate = {
+		remove_modifier = advcm_add_authority
+	}
+}
+
+advcm.25 = { # rm influence
+	type = country_event
+	hidden = yes
+	immediate = {
+		remove_modifier = advcm_add_influence
+	}
+}
+
+advcm.26 = { # rm techspred
+	type = country_event
+	hidden = yes
+	immediate = {
+		remove_modifier = advcm_add_tech_spread
+	}
+}
+
+advcm.27 = { # rm birthrate
+	type = country_event
+	hidden = yes
+	immediate = {
+		every_scope_state = {
+		
+			remove_modifier = advcm_add_birth_rate
+			
+		}
+	}
+}
+
+advcm.28 = { # add income						
+	type = country_event
+	hidden = yes
+	immediate = {
+		add_modifier = advcm_add_income
+	}
+}
+
+advcm.29 = { # rm income
+	type = country_event
+	hidden = yes
+	immediate = {
+		remove_modifier = advcm_add_income
+	}
+}
+
+advcm.30 = { # add killrate						
+	type = country_event
+	hidden = yes
+	immediate = {
+		add_modifier = advcm_add_killrate
+	}
+}
+
+advcm.31 = { # rm killrate
+	type = country_event
+	hidden = yes
+	immediate = {
+		remove_modifier = advcm_add_killrate
+	}
+}
+
+advcm.32 = { # add attack						
+	type = country_event
+	hidden = yes
+	immediate = {
+		add_modifier = advcm_add_attack
+	}
+}
+
+advcm.33 = { # rm attack
+	type = country_event
+	hidden = yes
+	immediate = {
+		remove_modifier = advcm_add_attack
+	}
+}
+
+advcm.34 = { # add defence						
+	type = country_event
+	hidden = yes
+	immediate = {
+		add_modifier = advcm_add_defense
+	}
+}
+
+advcm.35 = { # rm defence
+	type = country_event
+	hidden = yes
+	immediate = {
+		remove_modifier = advcm_add_defense
+	}
+}
+
+advcm.36 = { # add recovery						
+	type = country_event
+	hidden = yes
+	immediate = {
+		add_modifier = advcm_add_recovery
+	}
+}
+
+advcm.37 = { # rm recovery
+	type = country_event
+	hidden = yes
+	immediate = {
+		remove_modifier = advcm_add_recovery
+	}
+}
+
+advcm.38 = { # add prod
+	type = country_event
+	hidden = yes
+	immediate = {
+		every_scope_state = {
+			every_scope_building = {
+				add_modifier = advcm_add_production
+			}
+		}
+	}
+}
+
+advcm.39 = { # rm prod
+	type = country_event
+	hidden = yes
+	immediate = {
+		every_scope_state = {
+			every_scope_building = {
+				remove_modifier = advcm_add_production
+			}
+		}
+	}
+}
+
+advcm.40 = { # add through
+	type = country_event
+	hidden = yes
+	immediate = {
+		every_scope_state = {
+			every_scope_building = {
+				add_modifier = advcm_add_throughput
+			}
+		}
+	}
+}
+
+advcm.41 = { # rm through
+	type = country_event
+	hidden = yes
+	immediate = {
+		every_scope_state = {
+			every_scope_building = {
+				remove_modifier = advcm_add_throughput
+			}
+		}
+	}
+}

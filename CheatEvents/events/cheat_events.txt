@@ -1,0 +1,233 @@
+namespace = debug
+
+debug.9 = { # Isolationist Lite
+	type = country_event
+	hidden = yes
+	immediate = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_ethnostate
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_migration_controls
+		activate_law = law_type:law_secret_police
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_public_health_insurance
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_militarized_police
+		activate_law = law_type:law_poor_laws
+		activate_law = law_type:law_serfdom_banned
+		activate_law = law_type:law_outlawed_dissent
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_isolationism
+	}
+}
+
+debug.10 = { # Isolationist 
+	type = country_event
+	hidden = yes
+	immediate = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_ethnostate
+		activate_law = law_type:law_command_economy
+		activate_law = law_type:law_closed_borders
+		activate_law = law_type:law_secret_police
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_public_health_insurance
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_militarized_police
+		activate_law = law_type:law_poor_laws
+		activate_law = law_type:law_serfdom_banned
+		activate_law = law_type:law_outlawed_dissent
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_isolationism
+	}
+}
+
+debug.11 = { # economic paradise 
+	type = country_event
+	hidden = yes
+	immediate = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_anarchy
+		activate_law = law_type:law_multicultural
+		activate_law = law_type:law_laissez_faire
+		activate_law = law_type:law_no_migration_controls
+		activate_law = law_type:law_guaranteed_liberties
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_total_separation
+		activate_law = law_type:law_private_health_insurance
+		activate_law = law_type:law_private_schools
+		activate_law = law_type:law_local_police
+		activate_law = law_type:law_poor_laws
+		activate_law = law_type:law_serfdom_banned
+		activate_law = law_type:law_protected_speech
+		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_free_trade
+		activate_law = law_type:law_women_own_property
+		scope:ig_petty_bourgeoisie = {
+			add_ruling_interest_group = yes
+		}
+	}
+}
+
+debug.12 = { # Empire Defense
+	type = country_event
+	hidden = yes
+	immediate = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_migration_controls
+		activate_law = law_type:law_secret_police
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_public_health_insurance
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_militarized_police
+		activate_law = law_type:law_poor_laws
+		activate_law = law_type:law_serfdom_banned
+		activate_law = law_type:law_outlawed_dissent
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_protectionism
+	}
+}
+
+debug.13 = { # Empire offense
+	type = country_event
+	hidden = yes
+	immediate = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_migration_controls
+		activate_law = law_type:law_secret_police
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_public_health_insurance
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_militarized_police
+		activate_law = law_type:law_poor_laws
+		activate_law = law_type:law_serfdom_banned
+		activate_law = law_type:law_outlawed_dissent
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_mercantilism
+	}
+}
+
+debug.14 = { # Syndicalists! 
+	type = country_event
+	hidden = yes
+	immediate = {
+		activate_law = law_type:law_council_republic
+		activate_law = law_type:law_anarchy
+		activate_law = law_type:law_cultural_exclusion
+		activate_law = law_type:law_command_economy
+		activate_law = law_type:law_no_migration_controls
+		activate_law = law_type:law_national_guard
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_public_health_insurance
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_dedicated_police
+		activate_law = law_type:law_wage_controls
+		activate_law = law_type:law_serfdom_banned
+		activate_law = law_type:law_right_of_assembly
+		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_protectionism
+		activate_law = law_type:law_graduated_taxation
+		scope:ig_trade_unions = {
+			add_ruling_interest_group = yes
+		}
+	}
+}
+
+debug.15 = { # Communists! 
+	type = country_event
+	hidden = yes
+	immediate = {
+		activate_law = law_type:law_council_republic
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_command_economy
+		activate_law = law_type:law_closed_borders
+		activate_law = law_type:law_secret_police
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_public_health_insurance
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_militarized_police
+		activate_law = law_type:law_old_age_pension
+		activate_law = law_type:law_serfdom_banned
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_mass_conscription
+		activate_law = law_type:law_isolationism
+		activate_law = law_type:law_proportional_taxation
+		ruler = {
+			kill_character = yes
+		}
+		scope:ig_trade_unions = {
+			add_ruling_interest_group = yes
+		}
+		
+		# set_state_religion = rel:marxist
+		# every_scope_state = {
+		# 	convert_population = {
+		# 		value = 0.1 # 10% of population in the state
+		# 		target = rel:marxist
+		# 	}
+		# }
+		# every_scope_pop = {
+		# 	limit = {
+		# 		is_pop_type = clergymen
+		# 		not = { has_pop_religion = rel:marxist }
+		# 	}
+		# 	change_poptype = pop_type:peasants
+		# }
+		# every_scope_pop = {
+		# 	limit = {
+		# 		is_pop_type = academics
+		# 		not = { has_pop_religion = rel:marxist }
+		# 	}
+		# 	convert = rel:marxist
+		# }
+	}
+}
+
+debug.16 = { # Robber Barons' paradise 
+	type = country_event
+	hidden = yes
+	immediate = {
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_multicultural
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_no_migration_controls
+		activate_law = law_type:law_secret_police
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_total_separation
+		activate_law = law_type:law_private_health_insurance
+		activate_law = law_type:law_private_schools
+		activate_law = law_type:law_local_police
+		activate_law = law_type:law_poor_laws
+		activate_law = law_type:law_serfdom_banned
+		activate_law = law_type:law_protected_speech
+		activate_law = law_type:law_national_militia
+		activate_law = law_type:`law_type:law_free_trade
+		activate_law = law_type:law_women_own_property
+		scope:ig_industrialists = {
+			add_ruling_interest_group = yes
+		}
+	}
+}
+
+debug.17 = { # goodboy 
+	type = country_event
+	hidden = yes
+	immediate = {
+		change_infamy = -100
+	}
+}

@@ -23,9 +23,9 @@ advcm_add_birth_rate = {
 	state_birth_rate_mult = 0.5
 }
 
-advcm_add_production = {
+advcm_add_efficiency = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	building_production_mult = 5.0
+	building_input_mult = -0.999
 }
 
 advcm_add_throughput = {

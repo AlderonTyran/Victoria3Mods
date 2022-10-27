@@ -468,27 +468,19 @@ advcm.37 = { # rm recovery
 	}
 }
 
-advcm.38 = { # add prod
+advcm.38 = { # add eff
 	type = country_event
 	hidden = yes
 	immediate = {
-		every_scope_state = {
-			every_scope_building = {
-				add_modifier = advcm_add_production
-			}
-		}
+		add_modifier = advcm_add_efficiency
 	}
 }
 
-advcm.39 = { # rm prod
+advcm.39 = { # rm eff
 	type = country_event
 	hidden = yes
 	immediate = {
-		every_scope_state = {
-			every_scope_building = {
-				remove_modifier = advcm_add_production
-			}
-		}
+		remove_modifier = advcm_add_efficiency
 	}
 }
 
@@ -496,11 +488,7 @@ advcm.40 = { # add through
 	type = country_event
 	hidden = yes
 	immediate = {
-		every_scope_state = {
-			every_scope_building = {
-				add_modifier = advcm_add_throughput
-			}
-		}
+		add_modifier = advcm_add_throughput
 	}
 }
 
@@ -508,10 +496,6 @@ advcm.41 = { # rm through
 	type = country_event
 	hidden = yes
 	immediate = {
-		every_scope_state = {
-			every_scope_building = {
-				remove_modifier = advcm_add_throughput
-			}
-		}
+		remove_modifier = advcm_add_throughput
 	}
 }

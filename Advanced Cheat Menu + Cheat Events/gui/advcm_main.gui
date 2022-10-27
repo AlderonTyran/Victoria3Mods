@@ -285,10 +285,10 @@ window = {
 						}
 						
 						button_standard = {
-							name = "advcm_prod"
+							name = "advcm_eff"
 							onclick = "[ExecuteConsoleCommand('event advcm.38')]"
 							onrightclick = "[ExecuteConsoleCommand('event advcm.39')]"
-							tooltip = "Click to increase production by 500%, right click to disable."
+							tooltip = "Click to decrease input costs by 99.9%, right click to disable."
 							using = tooltip_ne
 							size = { 130 35 }
 							text = "Magical Factories!"
@@ -296,8 +296,8 @@ window = {
 
 						button_standard = {
 							name = "advcm_throughput"
-							onclick = "[ExecuteConsoleCommand('event advcm.38')]"
-							onrightclick = "[ExecuteConsoleCommand('event advcm.39')]"
+							onclick = "[ExecuteConsoleCommand('event advcm.40')]"
+							onrightclick = "[ExecuteConsoleCommand('event advcm.41')]"
 							button_ignore = none
 							tooltip = "Click to increase Throughput by 500%, right click to disable."
 							using = tooltip_ne

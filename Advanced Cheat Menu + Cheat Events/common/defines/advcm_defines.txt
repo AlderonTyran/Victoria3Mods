@@ -1,0 +1,3 @@
+﻿NPops = {
+    #POP_GROWTH_MAX_MORTALITY = 1.0
+}

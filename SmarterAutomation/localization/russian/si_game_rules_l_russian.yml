@@ -1,0 +1,8 @@
+﻿l_russian:
+ rule_ec_autobuild:0 "ARoAI Autobuild"
+ setting_ec_allow_autobuild:0 "Allowed"
+ setting_ec_allow_autobuild_desc:0 "This Gamerule will work in concert with ARoAI, giving Players a decision that will automatically construct buildings in their countries outside of the Improved Auto Expand logic."
+ setting_ec_disallow_autobuild:0 "#high Disallowed#!"
+ setting_ec_disallow_autobuild_desc:0 "Players will not be prompted with ARoAI's Autobuild decision."
+ 
+ 

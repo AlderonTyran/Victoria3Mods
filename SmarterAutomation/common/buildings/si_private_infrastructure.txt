@@ -35,6 +35,6 @@ building_railway = {
 				owner = { has_law = law_type:law_command_economy}
 			}
 		}
-		owner.construction_queue_duration < max_autoexpand_queue_weeks
+		owner.construction_queue_duration < 100
 	}
 }

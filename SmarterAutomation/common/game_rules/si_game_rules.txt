@@ -1,0 +1,5 @@
+﻿ec_autobuild = {
+	default = ec_disallow_autobuild
+	ec_allow_autobuild = {}
+	ec_disallow_autobuild = {}
+}

@@ -1,0 +1,24 @@
+﻿namespace = si_automation_events
+
+si_automation_events.1 = {
+    type = country_event
+	hidden = yes
+
+	trigger = {
+        is_player = yes
+        has_law = law_type:law_laissez_faire
+    }
+
+    immediate = {
+        every_scope_state = {
+            every_scope_building = {
+                if = {
+                    limit = {
+                        should_auto_downsize = yes
+                    }
+                    # Reduce building size!                    
+                }
+            }
+        }
+    }
+}

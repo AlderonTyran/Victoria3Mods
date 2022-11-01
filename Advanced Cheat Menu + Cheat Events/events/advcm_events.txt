@@ -27,38 +27,37 @@ advcm.3 = {								# rem money
 	}
 }
 
-advcm.4 = {								# add loyalists
+advcm.4 = {								# add radicals
 	type = country_event
 	hidden = yes
 	immediate = {
-		add_loyalists = { value = 100000 }
+		add_radicals = { value = 0.1 }
 	}
 }
 
-advcm.5 = {								# rem loyalists
+# advcm.5 = {								# rem radicals
+# 	type = country_event
+# 	hidden = yes
+# 	immediate = {
+# 		add_loyalists = { value = 0.1 }
+# 	}
+# }
+
+advcm.6 = {								# add loyalists
 	type = country_event
 	hidden = yes
 	immediate = {
-		add_loyalists = { value = -100000 }
+		add_loyalists = { value = 0.1 }
 	}
 }
 
-advcm.6 = {								# add radicals
-	type = country_event
-	hidden = yes
-	immediate = {
-		add_radicals = { value = 100000 }
-	}
-}
-
-advcm.7 = {								# rem radicals
-	type = country_event
-	hidden = yes
-	immediate = {
-		add_radicals = { value = -100000 }
-	}
-}
-
+# advcm.7 = {								# rem loyalists
+# 	type = country_event
+# 	hidden = yes
+# 	immediate = {
+# 		add_radicals = { value = 0.1 }
+# 	}
+# }
 advcm.8 = {								# add bureaucracy						
 	type = country_event
 	hidden = yes
@@ -308,7 +307,7 @@ advcm.19 = { # Robber Barons' paradise
 		activate_law = law_type:law_serfdom_banned
 		activate_law = law_type:law_protected_speech
 		activate_law = law_type:law_national_militia
-		activate_law = law_type:`law_type:law_free_trade
+		activate_law = law_type:law_free_trade
 		activate_law = law_type:law_women_own_property
 		scope:ig_industrialists = {
 			add_ruling_interest_group = yes

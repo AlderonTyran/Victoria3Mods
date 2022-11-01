@@ -35,7 +35,7 @@ advcm_add_throughput = {
 
 advcm_add_income = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	tax_income_add = 0.5
+	country_minting_add = 1000000.0
 }
 
 advcm_add_killrate = {
@@ -53,6 +53,11 @@ advcm_add_defense = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	unit_navy_defense_mult = 2.0
 	unit_defense_mult = 2.0
+}
+
+advcm_add_recovery = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	unit_recovery_rate_add = 2.0
 }
 
 advcm_add_recovery = {

@@ -1,9 +1,29 @@
-﻿default_auto_expand_rule = { 
+﻿cb_state_has_free_workforce = {
+	OR = {
+		state_unemployment_rate >= 0.02
+		AND = {
+			any_scope_pop = {
+				is_pop_type = peasants
+				OR = {
+					pop_employment_building_group =	bg_subsistence_agriculture
+					pop_employment_building_group =	bg_subsistence_ranching
+				}
+			}
+			any_scope_building = {
+				is_subsistence_building = yes
+				level > 0
+				occupancy >= 0.02
+			}
+		}
+	}
+}
+
+default_auto_expand_rule = { 
 	cash_reserves_ratio > 0.75
 	state = {
 		cb_state_has_free_workforce = yes
 	}
-	building_has_goods_shortage = false
+	building_has_goods_shortage = no
 	state.market_access > 0.9
 	OR = {
 		weekly_profit > 1
@@ -14,19 +34,31 @@
 			has_active_production_method = pm_worker_cooperative_building_glassworks
 			has_active_production_method = pm_worker_cooperative_building_tooling_workshops
 			has_active_production_method = pm_worker_cooperative_building_paper_mills
-			has_active_production_method = pm_worker_cooperative_building_shipyards 
-			has_active_production_method = pm_worker_cooperative_building_arms_industry 
-			has_active_production_method = pm_worker_cooperative_building_rice_farm 
-			has_active_production_method = pm_worker_cooperative_building_coal_mine 
-			has_active_production_method = pm_worker_cooperative_building_iron_mine 
-			has_active_production_method = pm_worker_cooperative_building_lead_mine 
-			has_active_production_method = pm_worker_cooperative_building_sulfur_mine
-			has_active_production_method = pm_worker_cooperative_building_gold_mine 
+			has_active_production_method = pm_worker_cooperative_building_shipyards
+			has_active_production_method = pm_worker_cooperative_building_arms_industry
+			has_active_production_method = pm_worker_cooperative_farm
 			has_active_production_method = pm_worker_cooperative_building_logging_camp
 			has_active_production_method = pm_worker_cooperative_building_fishing_wharf
 			has_active_production_method = pm_worker_cooperative_building_whaling_station
+			has_active_production_method = pm_worker_cooperative_plantation
+			has_active_production_method = pm_worker_cooperative_industry
+			has_active_production_method = pm_worker_cooperative_building_coal_mine
+			has_active_production_method = pm_worker_cooperative_building_iron_mine
+			has_active_production_method = pm_worker_cooperative_building_lead_mine
+			has_active_production_method = pm_worker_cooperative_building_sulfur_mine
 		}
 		owner = { has_law = law_type:law_command_economy}
 	}
-	owner.construction_queue_duration < max_autoexpand_queue_weeks
+	owner.construction_queue_duration < 100
+}
+
+should_auto_downsize = {
+	AND = {
+		is_subsidized = no
+		is_under_construction = no
+		AND = {
+			cash_reserves_ratio < 0.01
+			weekly_profit < 1
+		}
+	}
 }

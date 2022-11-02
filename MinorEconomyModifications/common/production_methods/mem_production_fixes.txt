@@ -40,7 +40,7 @@ pm_gas_streetlights = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			building_input_oil_add = 10
+			building_input_oil_add = 0.1
 			building_output_services_add = 30
 		}
 

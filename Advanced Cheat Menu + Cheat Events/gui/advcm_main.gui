@@ -1,5 +1,50 @@
 ﻿
 
+template cheat_menu_info_panel {
+	widget = {
+		layer = top
+
+		name = advcm_button
+		position = { 0 680}
+		size = { 40 40 }
+		using = Animation_ShowHide_Quick
+
+
+		sidepanel_button_small = {
+			name = "advcm_shortcut_button"
+			size = { 42 40 }
+			alpha = 0.7
+
+			onclick = "[ExecuteConsoleCommand('gui.createwidget gui/advcm_main.gui advcm_main_window')]"
+			#onclick = "[GetVariableSystem.Toggle('advcm_main_visible')]"
+			tooltip = advcm_button_tt
+
+			blockoverride "icon" {
+				texture = "gfx/interface/icons/military_icons/skull.dds"
+			}
+
+			blockoverride "icon_size" {
+				size = { 25 25 }
+			}
+
+			state = {
+				name = _mouse_enter
+				alpha = 1
+				duration = 0.7
+				using = Animation_Curve_Default
+			}
+
+			state = {
+				name = _mouse_leave
+				alpha = 0.7
+				duration = 0.2
+				using = Animation_Curve_Default
+			}
+		}
+	}
+}
+
+
 # This window is just for testing. You can spawn it from the console menu.
 
 window = {
@@ -11,29 +56,29 @@ window = {
 	filter_mouse = all
 	allow_outside = yes
 	alwaystransparent = no
-	
+
 	using = Window_Background
 	using = Window_Decoration
 	movable = yes
-    
+
     datacontext = "[GetVariableSystem]"
 	datacontext = "[GetPlayer]"
-	
-	
+
+
 	state = {
 		name = _show
 		using = Animation_FadeIn_Quick
 	}
-	
+
 	state = {
 		name = _hide
 		using = Animation_FadeOut_Quick
 	}
-	
+
 	vbox = {
 		restrictparent_min = yes
 		using = Window_Margins
-		
+
 		header_pattern = {
 			layoutpolicy_horizontal = expanding
 
@@ -48,11 +93,11 @@ window = {
 				onclick = "[ExecuteConsoleCommand('gui.clearwidgets')]"
 			}
 		}
-		
-		
+
+
 		widget = {
 			size = { 640 400 }
-			
+
 			widget = {
                 position = { 0 30 }
                 size = { 640 280 }
@@ -68,7 +113,7 @@ window = {
 							size = { 130 35 }
 							text = "Treasury"
 						}
-						
+
 						button_standard = {
 							name = "advcm_bureaucracy"
 							onclick = "[ExecuteConsoleCommand('event advcm.8')]"
@@ -78,7 +123,7 @@ window = {
 							size = { 130 35 }
 							text = "Bureaucracy"
 						}
-						
+
 						button_standard = {
 							name = "advcm_authority"
 							onclick = "[ExecuteConsoleCommand('event advcm.9')]"
@@ -88,7 +133,7 @@ window = {
 							size = { 130 35 }
 							text = "Authority"
 						}
-						
+
 						button_standard = {
 							name = "advcm_influence"
 							onclick = "[ExecuteConsoleCommand('event advcm.10')]"
@@ -98,9 +143,9 @@ window = {
 							size = { 130 35 }
 							text = "Influence"
 						}
-					
+
 					}
-					
+
 					hbox = {
 						button_standard = {
 							name = "advcm_loyalists"
@@ -111,7 +156,7 @@ window = {
 							size = { 130 35 }
 							text = "Loyalists"
 						}
-						
+
 						button_standard = {
 							name = "advcm_radicals"
 							onclick = "[ExecuteConsoleCommand('event advcm.4')]"
@@ -121,7 +166,7 @@ window = {
 							size = { 130 35 }
 							text = "Radicals"
 						}
-						
+
 						button_standard = {
 							name = "advcm_tech_spread"
 							onclick = "[ExecuteConsoleCommand('event advcm.11')]"
@@ -142,7 +187,7 @@ window = {
 							size = { 130 35 }
 							text = "Infamy"
 						}
-					
+
 					}
 
 					hbox = {
@@ -155,7 +200,7 @@ window = {
 							size = { 130 35 }
 							text = "Hardcore Introvert"
 						}
-						
+
 						button_standard = {
 							name = "advcm_isolationist_lite"
 							onclick = "[ExecuteConsoleCommand('event advcm.12')]"
@@ -164,7 +209,7 @@ window = {
 							size = { 130 35 }
 							text = "Introvert-Lite"
 						}
-						
+
 						button_standard = {
 							name = "advcm_empire_protec"
 							onclick = "[ExecuteConsoleCommand('event advcm.15')]"
@@ -173,7 +218,7 @@ window = {
 							size = { 130 35 }
 							text = "Empire-Protec"
 						}
-						
+
 						button_standard = {
 							name = "advcm_empire_attac"
 							onclick = "[ExecuteConsoleCommand('event advcm.16')]"
@@ -182,9 +227,9 @@ window = {
 							size = { 130 35 }
 							text = "Empire-Attac"
 						}
-					
+
 					}
-					
+
 					hbox = {
 						button_standard = {
 							name = "advcm_ancap"
@@ -194,7 +239,7 @@ window = {
 							size = { 130 35 }
 							text = "An-Capistan"
 						}
-						
+
 						button_standard = {
 							name = "advcm_rob_bar_par"
 							onclick = "[ExecuteConsoleCommand('event advcm.19')]"
@@ -203,7 +248,7 @@ window = {
 							size = { 130 35 }
 							text = "Robber Barron's"
 						}
-						
+
 						button_standard = {
 							name = "advcm_syndi"
 							onclick = "[ExecuteConsoleCommand('event advcm.17')]"
@@ -222,7 +267,7 @@ window = {
 							size = { 130 35 }
 							text = "Lenin's Legacy"
 						}
-					
+
 					}
 
 					hbox = {
@@ -235,7 +280,7 @@ window = {
 							size = { 130 35 }
 							text = "Growth Serum"
 						}
-						
+
 						button_standard = {
 							name = "advcm_build"
 							onclick = "[ExecuteConsoleCommand('fastbuild')]"
@@ -244,7 +289,7 @@ window = {
 							size = { 130 35 }
 							text = "Construction Drive"
 						}
-						
+
 						button_standard = {
 							name = "advcm_enact"
 							onclick = "[ExecuteConsoleCommand('fastenact')]"
@@ -263,7 +308,7 @@ window = {
 							size = { 130 35 }
 							text = "Brainiac"
 						}
-					
+
 					}
 
 					hbox = {
@@ -275,7 +320,7 @@ window = {
 							size = { 130 35 }
 							text = "Bardic Charisma"
 						}
-						
+
 						button_standard = {
 							name = "advcm_taxation"
 							onclick = "[ExecuteConsoleCommand('event advcm.28')]"
@@ -285,7 +330,7 @@ window = {
 							size = { 130 35 }
 							text = "Quantitative Easing"
 						}
-						
+
 						button_standard = {
 							name = "advcm_eff"
 							onclick = "[ExecuteConsoleCommand('event advcm.38')]"
@@ -306,7 +351,7 @@ window = {
 							size = { 130 35 }
 							text = "Robot Factories!"
 						}
-					
+
 					}
 
 					hbox = {
@@ -319,7 +364,7 @@ window = {
 							size = { 130 35 }
 							text = "The Killing Fields"
 						}
-						
+
 						button_standard = {
 							name = "advcm_recovery"
 							onclick = "[ExecuteConsoleCommand('event advcm.36')]"
@@ -329,7 +374,7 @@ window = {
 							size = { 130 35 }
 							text = "The Immortals"
 						}
-						
+
 						button_standard = {
 							name = "advcm_attac"
 							onclick = "[ExecuteConsoleCommand('event advcm.32')]"
@@ -349,11 +394,11 @@ window = {
 							size = { 130 35 }
 							text = "The Great Protec"
 						}
-					
+
 					}
 				}
-            }			
-			
+            }
+
             widget = {
                 position = { 265 350 }
                 size = { 110 40 }
@@ -367,9 +412,9 @@ window = {
                     }
                 }
 			}
-			
-		}            
-	
+
+		}
+
 	}
-	
+
 }
